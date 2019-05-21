@@ -48,4 +48,23 @@
         </ion-card-content>
       </ion-card>
     </ion-list>
+
+    <ion-card>
+        <ion-header>
+            <ion-card-title>
+                Subida de archivos
+            </ion-card-title>
+        </ion-header>
+        <ion-card-content>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+                <ion-label>Título</ion-label>
+                <ion-input type="text" id="title" formControlName="title"></ion-input>
+                <ion-label>Imagen</ion-label>
+                <ion-input type="file" accept="image/*" id="uploadImage" (change)="onFileChange($event)" #fileInput></ion-input>
+                <ion-button type="submit" >Subir Imagen</ion-button>
+            </form>
+        </ion-card-content>
+    </ion-card>
+
 </ion-content>
