@@ -38,4 +38,14 @@
         <ion-label>Theme Your App</ion-label>
       </ion-item>
     </ion-list>
+    <ion-list *ngFor="let it of images">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{it.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <img [src]="it.image"/>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
 </ion-content>
